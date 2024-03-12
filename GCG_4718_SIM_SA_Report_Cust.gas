@@ -1,0 +1,1200 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("Sales Analysis by Customer")
+gui.Form1..size(9000,10995)
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,Form1_Unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial Narrow")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(15790320)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(False)
+gui.Form1..ShowInTaskBar(False)
+gui.Form1..titlebar(True)
+gui.Form1.lblSDate.create(label,"Starting Date",True,1500,300,1,210,105,True,0,Arial,8,15790320,0)
+gui.Form1.lblSDate.defaultvalue("")
+gui.Form1.lblSDate.controlgroup(0)
+gui.Form1.lblEDate.create(label,"Ending Date",True,1500,300,1,2715,105,True,0,Arial,8,15790320,0)
+gui.Form1.lblEDate.defaultvalue("")
+gui.Form1.lblEDate.controlgroup(0)
+gui.Form1.lblSPL.create(label,"Starting PL",True,945,300,1,210,1050,True,0,Arial,8,15790320,0)
+gui.Form1.lblSPL.defaultvalue("")
+gui.Form1.lblSPL.controlgroup(0)
+gui.Form1.txtSPL.create(textbox,"",True,660,300,0,105,1470,True,0,Arial,8,16777215,1)
+gui.Form1.txtSPL.defaultvalue("")
+gui.Form1.txtSPL.controlgroup(0)
+gui.Form1.cmdSPL.create(button)
+gui.Form1.cmdSPL.caption("^")
+gui.Form1.cmdSPL.visible(True)
+gui.Form1.cmdSPL.size(450,345)
+gui.Form1.cmdSPL.zorder(0)
+gui.Form1.cmdSPL.position(855,1440)
+gui.Form1.cmdSPL.enabled(True)
+gui.Form1.cmdSPL.fontname("Arial")
+gui.Form1.cmdSPL.fontsize(7)
+gui.Form1.cmdSPL.event(click,cmdspl_click)
+gui.Form1.cmdSPL.defaultvalue("")
+gui.Form1.cmdSPL.controlgroup(0)
+gui.Form1.lblEPL.create(label,"Ending PL",True,1500,300,1,1785,1050,True,0,Arial,8,15790320,0)
+gui.Form1.lblEPL.defaultvalue("")
+gui.Form1.lblEPL.controlgroup(0)
+gui.Form1.txtEPL.create(textbox,"",True,675,300,0,1785,1470,True,0,Arial,8,16777215,1)
+gui.Form1.txtEPL.defaultvalue("")
+gui.Form1.txtEPL.controlgroup(0)
+gui.Form1.cmdEPL.create(button)
+gui.Form1.cmdEPL.caption("^")
+gui.Form1.cmdEPL.visible(True)
+gui.Form1.cmdEPL.size(450,345)
+gui.Form1.cmdEPL.zorder(0)
+gui.Form1.cmdEPL.position(2550,1440)
+gui.Form1.cmdEPL.enabled(True)
+gui.Form1.cmdEPL.fontname("Arial")
+gui.Form1.cmdEPL.fontsize(7)
+gui.Form1.cmdEPL.event(click,cmdepl_click)
+gui.Form1.cmdEPL.defaultvalue("")
+gui.Form1.cmdEPL.controlgroup(0)
+gui.Form1.cmdAddPL.create(button)
+gui.Form1.cmdAddPL.caption("Add")
+gui.Form1.cmdAddPL.visible(True)
+gui.Form1.cmdAddPL.size(1125,345)
+gui.Form1.cmdAddPL.zorder(0)
+gui.Form1.cmdAddPL.position(105,2520)
+gui.Form1.cmdAddPL.enabled(True)
+gui.Form1.cmdAddPL.fontname("Arial")
+gui.Form1.cmdAddPL.fontsize(8)
+gui.Form1.cmdAddPL.event(click,cmdaddpl_click)
+gui.Form1.cmdAddPL.defaultvalue("")
+gui.Form1.cmdAddPL.controlgroup(0)
+gui.Form1.lblSCust.create(label,"Starting Customer",True,1500,300,1,4620,1050,True,0,Arial,8,15790320,0)
+gui.Form1.lblSCust.defaultvalue("")
+gui.Form1.lblSCust.controlgroup(0)
+gui.Form1.txtSCust.create(textbox,"",True,1200,300,0,4620,1470,True,0,Arial,8,16777215,1)
+gui.Form1.txtSCust.defaultvalue("")
+gui.Form1.txtSCust.controlgroup(0)
+gui.Form1.lblECust.create(label,"Ending Customer",True,1500,300,1,6720,1050,True,0,Arial,8,15790320,0)
+gui.Form1.lblECust.defaultvalue("")
+gui.Form1.lblECust.controlgroup(0)
+gui.Form1.cmdSCust.create(button)
+gui.Form1.cmdSCust.caption("^")
+gui.Form1.cmdSCust.visible(True)
+gui.Form1.cmdSCust.size(450,345)
+gui.Form1.cmdSCust.zorder(0)
+gui.Form1.cmdSCust.position(5895,1440)
+gui.Form1.cmdSCust.enabled(True)
+gui.Form1.cmdSCust.fontname("Arial")
+gui.Form1.cmdSCust.fontsize(7)
+gui.Form1.cmdSCust.event(click,cmdscust_click)
+gui.Form1.cmdSCust.defaultvalue("")
+gui.Form1.cmdSCust.controlgroup(0)
+gui.Form1.txtECust.create(textbox,"",True,1200,300,0,6720,1470,True,0,Arial,8,16777215,1)
+gui.Form1.txtECust.defaultvalue("")
+gui.Form1.txtECust.controlgroup(0)
+gui.Form1.cmdECust.create(button)
+gui.Form1.cmdECust.caption("^")
+gui.Form1.cmdECust.visible(True)
+gui.Form1.cmdECust.size(450,345)
+gui.Form1.cmdECust.zorder(0)
+gui.Form1.cmdECust.position(8010,1440)
+gui.Form1.cmdECust.enabled(True)
+gui.Form1.cmdECust.fontname("Arial")
+gui.Form1.cmdECust.fontsize(7)
+gui.Form1.cmdECust.event(click,cmdecust_click)
+gui.Form1.cmdECust.defaultvalue("")
+gui.Form1.cmdECust.controlgroup(0)
+gui.Form1.cmdAddCust.create(button)
+gui.Form1.cmdAddCust.caption("Add")
+gui.Form1.cmdAddCust.visible(True)
+gui.Form1.cmdAddCust.size(1125,345)
+gui.Form1.cmdAddCust.zorder(0)
+gui.Form1.cmdAddCust.position(4620,2520)
+gui.Form1.cmdAddCust.enabled(True)
+gui.Form1.cmdAddCust.fontname("Arial")
+gui.Form1.cmdAddCust.fontsize(8)
+gui.Form1.cmdAddCust.event(click,cmdaddcust_click)
+gui.Form1.cmdAddCust.defaultvalue("")
+gui.Form1.cmdAddCust.controlgroup(0)
+gui.Form1.chkAllPL.create(checkbox)
+gui.Form1.chkAllPL.caption("All Product Lines")
+gui.Form1.chkAllPL.visible(True)
+gui.Form1.chkAllPL.size(1650,360)
+gui.Form1.chkAllPL.zorder(0)
+gui.Form1.chkAllPL.position(105,1995)
+gui.Form1.chkAllPL.enabled(True)
+gui.Form1.chkAllPL.alignment(0)
+gui.Form1.chkAllPL.fontname("Arial")
+gui.Form1.chkAllPL.fontsize(8)
+gui.Form1.chkAllPL.event(click,chkallpl_click)
+gui.Form1.chkAllPL.defaultvalue("")
+gui.Form1.chkAllPL.controlgroup(0)
+gui.Form1.chkAllCust.create(checkbox)
+gui.Form1.chkAllCust.caption("All Customers")
+gui.Form1.chkAllCust.visible(True)
+gui.Form1.chkAllCust.size(1560,360)
+gui.Form1.chkAllCust.zorder(0)
+gui.Form1.chkAllCust.position(4620,1995)
+gui.Form1.chkAllCust.enabled(True)
+gui.Form1.chkAllCust.alignment(0)
+gui.Form1.chkAllCust.fontname("Arial")
+gui.Form1.chkAllCust.fontsize(8)
+gui.Form1.chkAllCust.event(click,chkallcust_click)
+gui.Form1.chkAllCust.defaultvalue("")
+gui.Form1.chkAllCust.controlgroup(0)
+gui.Form1.gsfgPL.create(gsflexgrid)
+gui.Form1.gsfgPL.FixedRows(0)
+gui.Form1.gsfgPL.FixedCols(0)
+gui.Form1.gsfgPL.visible(True)
+gui.Form1.gsfgPL.size(3600,6300)
+gui.Form1.gsfgPL.zorder(0)
+gui.Form1.gsfgPL.position(420,3150)
+gui.Form1.gsfgPL.enabled(True)
+gui.Form1.gsfgPL.event(commandclick,gsfgpl_commandclick)
+gui.Form1.gsfgCust.create(gsflexgrid)
+gui.Form1.gsfgCust.FixedRows(0)
+gui.Form1.gsfgCust.FixedCols(0)
+gui.Form1.gsfgCust.visible(True)
+gui.Form1.gsfgCust.size(3600,6225)
+gui.Form1.gsfgCust.zorder(0)
+gui.Form1.gsfgCust.position(4830,3150)
+gui.Form1.gsfgCust.enabled(True)
+gui.Form1.gsfgCust.event(commandclick,gsfgcust_commandclick)
+gui.Form1.cmdPrint.create(button)
+gui.Form1.cmdPrint.caption("Print")
+gui.Form1.cmdPrint.visible(True)
+gui.Form1.cmdPrint.size(1125,345)
+gui.Form1.cmdPrint.zorder(0)
+gui.Form1.cmdPrint.position(420,9765)
+gui.Form1.cmdPrint.enabled(True)
+gui.Form1.cmdPrint.fontname("Arial")
+gui.Form1.cmdPrint.fontsize(8)
+gui.Form1.cmdPrint.event(click,cmdprint_click)
+gui.Form1.cmdPrint.defaultvalue("")
+gui.Form1.cmdPrint.controlgroup(0)
+gui.Form1.dtpSDate.create(datepicker)
+gui.Form1.dtpSDate.visible(True)
+gui.Form1.dtpSDate.size(1935,285)
+gui.Form1.dtpSDate.zorder(0)
+gui.Form1.dtpSDate.position(200,400)
+gui.Form1.dtpSDate.enabled(True)
+gui.Form1.dtpSDate.checkbox(False)
+gui.Form1.dtpSDate.defaultvalue("")
+gui.Form1.dtpSDate.controlgroup(0)
+gui.Form1.dtpEDate.create(datepicker)
+gui.Form1.dtpEDate.visible(True)
+gui.Form1.dtpEDate.size(1950,285)
+gui.Form1.dtpEDate.zorder(0)
+gui.Form1.dtpEDate.position(2705,400)
+gui.Form1.dtpEDate.enabled(True)
+gui.Form1.dtpEDate.checkbox(False)
+gui.Form1.dtpEDate.defaultvalue("")
+gui.Form1.dtpEDate.controlgroup(0)
+gui.Form1.lblGen.create(label,"",True,4590,255,1,3700,9800,True,0,ArialNarrow,8,-2147483633,0)
+gui.Form1.lblGen.defaultvalue("")
+gui.Form1.lblGen.controlgroup(0)
+gui.Form1.txtSPL.tabstop(True)
+gui.Form1.txtSPL.tabindex(14)
+gui.Form1.cmdSPL.tabstop(True)
+gui.Form1.cmdSPL.tabindex(15)
+gui.Form1.txtEPL.tabstop(True)
+gui.Form1.txtEPL.tabindex(26)
+gui.Form1.cmdEPL.tabstop(True)
+gui.Form1.cmdEPL.tabindex(27)
+gui.Form1.cmdAddPL.tabstop(True)
+gui.Form1.cmdAddPL.tabindex(37)
+gui.Form1.txtSCust.tabstop(True)
+gui.Form1.txtSCust.tabindex(39)
+gui.Form1.cmdSCust.tabstop(True)
+gui.Form1.cmdSCust.tabindex(50)
+gui.Form1.txtECust.tabstop(True)
+gui.Form1.txtECust.tabindex(60)
+gui.Form1.cmdECust.tabstop(True)
+gui.Form1.cmdECust.tabindex(61)
+gui.Form1.cmdAddCust.tabstop(True)
+gui.Form1.cmdAddCust.tabindex(71)
+gui.Form1.chkAllPL.tabstop(True)
+gui.Form1.chkAllPL.tabindex(72)
+gui.Form1.chkAllCust.tabstop(True)
+gui.Form1.chkAllCust.tabindex(82)
+gui.Form1.cmdPrint.tabstop(True)
+gui.Form1.cmdPrint.tabindex(103)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uProdLine.Define("sSPL",String)
+Variable.UDT.uProdLine.Define("sEPL",String)
+Variable.uGlobal.uProdLine.Declare("uProdLine")
+Variable.UDT.uCustomer.Define("sSCust",String)
+Variable.UDT.uCustomer.Define("sECust",String)
+Variable.uGlobal.uCustomer.Declare("uCustomer")
+Variable.UDT.uReport.Define("iQty",Float,Qty_Ordered)
+Variable.UDT.uReport.Define("sPart",String,Part)
+Variable.UDT.uReport.Define("sDescription",String,Description)
+Variable.UDT.uReport.Define("sPL",String,Product_Line)
+Variable.UDT.uReport.Define("iExt",Float,Extension)
+Variable.UDT.uReport.Define("sCustomer",String,Customer)
+Variable.UDT.uReport.Define("iBIRunID",Long)
+Variable.UDT.uReport.Define("sDateOrder",String,Date_Order)
+Variable.UDT.uReport.Define("sEDate",Date)
+Variable.UDT.uReport.Define("sSDate",Date)
+Variable.UDT.uReport.Define("iProfit",Float,Cost)
+Variable.UDT.uReport.Define("sPLSelected",String)
+Variable.uGlobal.uReport.Declare("uReport")
+Variable.Global.iBIRunID.Declare(Long,0)
+Variable.Global.iBiLogID.Declare(Long,0)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Project created for Simpson Performance
+'Sales Analysis Report by Customer
+'Quote 5835
+'Date 11/19/14 by SKT
+
+V.Local.sSql.Declare(String)
+V.Local.iCount.Declare(Long)
+
+V.uGlobal.uReport.Redim(-1,-1)
+
+F.Intrinsic.Control.CallSub(Buildstylepl)
+F.Intrinsic.Control.CallSub(Buildstylecust)
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst","Delete GCG_4718_SIM_SA_Cust")
+F.ODBC.conx!rst.Close
+Gui.Form1..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.Form1_Unload.Start
+F.Intrinsic.Control.SetErrorHandler("Form1_Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form1_Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Form1_Unload.End
+
+Program.Sub.BuildStylePL.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStylePL_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.Form1.gsfgPL.Rows(2)
+Gui.Form1.gsfgPL.FixedRows(1)
+Gui.Form1.gsfgPL.Cols(3)
+
+Gui.Form1.gsfgPL.SetColumnPercentages(".40:.40:.20")
+
+'BuildStyle
+'Column 0
+'Style 1
+Gui.Form1.gsfgPL.BuildStyle(1,0,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(1,0,"Fontstyle","Bold",True)
+Gui.Form1.gsfgPL.BuildStyle(1,0,"Format","Alignment",4)
+'Column 0
+'Style 2
+Gui.Form1.gsfgPL.BuildStyle(2,0,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(2,0,"Format","Alignment",2)
+'Column 0
+'Style 3
+Gui.Form1.gsfgPL.BuildStyle(3,0,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(3,0,"Format","Alignment",4)
+
+'Column 1
+'Style 1
+Gui.Form1.gsfgPL.BuildStyle(1,1,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(1,1,"Fontstyle","Bold",True)
+Gui.Form1.gsfgPL.BuildStyle(1,1,"Format","Alignment",4)
+'Column 1
+'Style 2
+Gui.Form1.gsfgPL.BuildStyle(2,1,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(2,1,"Format","Alignment",2)
+'Column 1
+'Style 3
+Gui.Form1.gsfgPL.BuildStyle(3,1,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(3,1,"Format","Alignment",4)
+
+'Column 2
+'Style 1
+Gui.Form1.gsfgPL.BuildStyle(1,2,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(1,2,"Fontstyle","Bold",True)
+Gui.Form1.gsfgPL.BuildStyle(1,2,"Format","Alignment",4)
+'Column 2
+'Style 2
+Gui.Form1.gsfgPL.BuildStyle(2,2,"Format","Alignment",4)
+Gui.Form1.gsfgPL.BuildStyle(2,2,"Type","Command","Delete")
+'Column 2
+'Style 3
+Gui.Form1.gsfgPL.BuildStyle(3,2,"Type","Locked",True)
+Gui.Form1.gsfgPL.BuildStyle(3,2,"Format","Alignment",4)
+
+
+Gui.Form1.gsfgPL.ApplyStyle(0,1)
+Gui.Form1.gsfgPL.ApplyStyle(1,3)
+
+Gui.Form1.gsfgPL.TextMatrix(0,0,"Starting PL")
+Gui.Form1.gsfgPL.TextMatrix(1,0,"Ending PL")
+'Gui.Form1.gsfgPL.TextMatrix(2,0,"Delete")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStylePL_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStylePL.End
+
+Program.Sub.BuildStyleCust.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStyleCust_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+Gui.Form1.gsfgCust.Rows(2)
+Gui.Form1.gsfgCust.FixedRows(1)
+Gui.Form1.gsfgCust.Cols(3)
+
+Gui.Form1.gsfgCust.SetColumnPercentages(".40:.40:.20")
+
+'BuildStyle
+'Column 0
+'Style 1
+Gui.Form1.gsfgCust.BuildStyle(1,0,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(1,0,"Fontstyle","Bold",True)
+Gui.Form1.gsfgCust.BuildStyle(1,0,"Format","Alignment",4)
+'Column 0
+'Style 2
+Gui.Form1.gsfgCust.BuildStyle(2,0,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(2,0,"Format","Alignment",2)
+'Column 0
+'Style 3
+Gui.Form1.gsfgCust.BuildStyle(3,0,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(3,0,"Format","Alignment",4)
+
+'Column 1
+'Style 1
+Gui.Form1.gsfgCust.BuildStyle(1,1,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(1,1,"Fontstyle","Bold",True)
+Gui.Form1.gsfgCust.BuildStyle(1,1,"Format","Alignment",4)
+'Column 1
+'Style 2
+Gui.Form1.gsfgCust.BuildStyle(2,1,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(2,1,"Format","Alignment",2)
+'Column 1
+'Style 3
+Gui.Form1.gsfgCust.BuildStyle(3,1,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(3,1,"Format","Alignment",4)
+
+'Column 2
+'Style 1
+Gui.Form1.gsfgCust.BuildStyle(1,2,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(1,2,"Fontstyle","Bold",True)
+Gui.Form1.gsfgCust.BuildStyle(1,2,"Format","Alignment",4)
+'Column 2
+'Style 2
+Gui.Form1.gsfgCust.BuildStyle(2,2,"Format","Alignment",4)
+Gui.Form1.gsfgCust.BuildStyle(2,2,"Type","Command","Delete")
+'Column 2
+'Style 3
+Gui.Form1.gsfgCust.BuildStyle(3,2,"Type","Locked",True)
+Gui.Form1.gsfgCust.BuildStyle(3,2,"Format","Alignment",4)
+
+Gui.Form1.gsfgCust.ApplyStyle(0,1)
+Gui.Form1.gsfgCust.ApplyStyle(1,3)
+
+Gui.Form1.gsfgCust.TextMatrix(0,0,"Starting Customer")
+Gui.Form1.gsfgCust.TextMatrix(1,0,"Ending Customer")
+'Gui.Form1.gsfgCust.TextMatrix(2,0,"Delete")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyleCust_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyleCust.End
+
+program.sub.cmdspl_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdspl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(130,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,!=,"***CANCEL***")
+	Gui.Form1.txtSPL.Text(V.Local.sRet(0).Trim)
+	Gui.Form1.txtEPL.Text(V.Local.sRet(0).Trim)
+	Gui.Form1.txtEPL.SetFocus
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdspl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdspl_click.end
+
+program.sub.cmdepl_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdepl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(130,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,!=,"***CANCEL***")
+	Gui.Form1.txtEPL.Text(V.Local.sRet(0).Trim)
+	Gui.Form1.cmdAddPL.SetFocus
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdepl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdepl_click.end
+
+program.sub.cmdscust_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdscust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+
+F.Intrinsic.String.Split("Name_Customer*!*Customer*!*Address1*!*City*!*State*!*Zip","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("3000*!*1000*!*3000*!*2000*!*500*!*1000","*!*",V.Local.iWidths)
+F.Intrinsic.UI.Browser("Customer","conx","Select Name_Customer, customer, Address1, City, State, Zip from v_Customer_Master order by Name_Customer",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,!=,"***CANCEL***")
+	Gui.Form1.txtSCust.Text(V.Local.sRet(1).Trim)
+	Gui.Form1.txtECust.Text(V.Local.sRet(1).Trim)
+	Gui.Form1.txtECust.SetFocus
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdscust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdscust_click.end
+
+program.sub.cmdecust_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdecust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+
+F.Intrinsic.String.Split("Name_Customer*!*Customer*!*Address1*!*City*!*State*!*Zip","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("3000*!*1000*!*3000*!*2000*!*500*!*1000","*!*",V.Local.iWidths)
+F.Intrinsic.UI.Browser("Customer","conx","Select Name_Customer, customer, Address1, City, State, Zip from v_Customer_Master order by Name_Customer",V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,!=,"***CANCEL***")
+	Gui.Form1.txtECust.Text(V.Local.sRet(1).Trim)
+	Gui.Form1.cmdAddCust.SetFocus
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdecust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdecust_click.end
+
+program.sub.chkallpl_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallpl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllPL.Value,=,1)
+	Gui.Form1.txtSPL.Enabled(False)
+	Gui.Form1.txtEPL.Enabled(False)
+	Gui.Form1.cmdSPL.Enabled(False)
+	Gui.Form1.cmdEPL.Enabled(False)
+	Gui.Form1.cmdAddPL.Enabled(False)
+	Gui.Form1.gsfgPL.Visible(False)
+F.Intrinsic.Control.Else
+	Gui.Form1.txtSPL.Enabled(True)
+	Gui.Form1.txtEPL.Enabled(True)
+	Gui.Form1.cmdSPL.Enabled(True)
+	Gui.Form1.cmdEPL.Enabled(True)
+	Gui.Form1.cmdAddPL.Enabled(True)
+	Gui.Form1.gsfgPL.Visible(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallpl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallpl_click.end
+
+program.sub.chkallcust_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllCust.Value,=,1)
+	Gui.Form1.txtSCust.Enabled(False)
+	Gui.Form1.txtECust.Enabled(False)
+	Gui.Form1.cmdSCust.Enabled(False)
+	Gui.Form1.cmdECust.Enabled(False)
+	Gui.Form1.cmdAddCust.Enabled(False)
+	Gui.Form1.gsfgCust.Visible(False)
+F.Intrinsic.Control.Else
+	Gui.Form1.txtSCust.Enabled(True)
+	Gui.Form1.txtECust.Enabled(True)
+	Gui.Form1.cmdSCust.Enabled(True)
+	Gui.Form1.cmdECust.Enabled(True)
+	Gui.Form1.cmdAddCust.Enabled(True)
+	Gui.Form1.gsfgCust.Visible(True)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkallcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallcust_click.end
+
+program.sub.cmdaddpl_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddpl_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iRCount.Declare(Long)
+
+F.Intrinsic.Control.If(V.Screen.Form1!txtEPL.Text,!=,"")
+
+	V.Local.iRCount.Set(V.Screen.Form1!gsfgPL.Rows)
+	Gui.Form1.gsfgPL.Rows(V.Local.iRCount)
+	F.Intrinsic.Math.Sub(V.Local.iRCount,1,V.Local.iRCount)
+	Gui.Form1.gsfgPL.TextMatrix(0,V.Local.iRCount,V.Screen.Form1!txtSPL.Text)
+	Gui.Form1.gsfgPL.TextMatrix(1,V.Local.iRCount,V.Screen.Form1!txtEPL.Text)
+	Gui.Form1.gsfgPL.ApplyStyle(V.Local.iRCount,2)
+	F.Intrinsic.Math.Add(V.Local.iRCount,2,V.Local.iRCount)
+	Gui.Form1.gsfgPL.Rows(V.Local.iRCount)
+	F.Intrinsic.Math.Sub(V.Local.iRCount,1,V.Local.iRCount)
+	Gui.Form1.gsfgPL.RemoveStyle(V.Local.iRCount)
+	Gui.Form1.gsfgPL.ApplyStyle(V.Local.iRCount,3)
+
+	Gui.Form1.txtSPL.Text("")
+	Gui.Form1.txtEPL.Text("")
+
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddpl_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddpl_click.end
+
+program.sub.cmdaddcust_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddcust_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iRCount.Declare(Long)
+
+F.Intrinsic.Control.If(V.Screen.Form1!txtECust.Text,!=,"")
+
+	V.Local.iRCount.Set(V.Screen.Form1!gsfgCust.Rows)
+	Gui.Form1.gsfgCust.Rows(V.Local.iRCount)
+	F.Intrinsic.Math.Sub(V.Local.iRCount,1,V.Local.iRCount)
+	Gui.Form1.gsfgCust.TextMatrix(0,V.Local.iRCount,V.Screen.Form1!txtSCust.Text)
+	Gui.Form1.gsfgCust.TextMatrix(1,V.Local.iRCount,V.Screen.Form1!txtECust.Text)
+	Gui.Form1.gsfgCust.ApplyStyle(V.Local.iRCount,2)
+	F.Intrinsic.Math.Add(V.Local.iRCount,2,V.Local.iRCount)
+	Gui.Form1.gsfgCust.Rows(V.Local.iRCount)
+	F.Intrinsic.Math.Sub(V.Local.iRCount,1,V.Local.iRCount)
+	Gui.Form1.gsfgCust.RemoveStyle(V.Local.iRCount)
+	Gui.Form1.gsfgCust.ApplyStyle(V.Local.iRCount,3)
+	Gui.Form1.txtSCust.Text("")
+	Gui.Form1.txtECust.Text("")
+
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddcust_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdaddcust_click.end
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sSql.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sPYear.Declare(String)
+V.Local.sPL.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.iRow2.Declare(Long)
+V.Local.iCount.Declare(Long)
+V.Local.iCount2.Declare(Long)
+V.Local.iRet.Declare(Long)
+V.Local.dSDate.Declare(Date)
+V.Local.dEDate.Declare(Date)
+V.Local.dPYear.Declare(Date)
+V.Local.dCYear.Declare(Date)
+
+V.Local.iRet.Redim(0,1)
+
+'Lock down the Screen and let user know the report is being generated
+Gui.Form1.chkAllCust.Enabled(False)
+Gui.Form1.chkAllPL.Enabled(False)
+Gui.Form1.cmdAddCust.Enabled(False)
+Gui.Form1.cmdAddPL.Enabled(False)
+Gui.Form1.cmdECust.Enabled(False)
+Gui.Form1.cmdEPL.Enabled(False)
+Gui.Form1.cmdPrint.Enabled(False)
+Gui.Form1.cmdSCust.Enabled(False)
+Gui.Form1.cmdSPL.Enabled(False)
+Gui.Form1.dtpEDate.Enabled(False)
+Gui.Form1.dtpSDate.Enabled(False)
+Gui.Form1.gsfgCust.Enabled(False)
+Gui.Form1.gsfgPL.Enabled(False)
+Gui.Form1.txtECust.Enabled(False)
+Gui.Form1.txtEPL.Enabled(False)
+Gui.Form1.txtSCust.Enabled(False)
+Gui.Form1.txtSPL.Enabled(False)
+
+Gui.Form1.lblGen.Visible(True)
+Gui.Form1.lblGen.Caption("Please Wait the Report is being Generated!")
+
+F.Global.BI.GetRunID(V.Global.iBIRunID)
+F.Global.BI.StartLogging(V.Global.iBIRunID,-1,-1,"",V.Global.iBILogID)
+'Date Range entered by user
+V.Local.dSDate.Set(V.Screen.Form1!dtpSDate.Value)
+V.Local.dEDate.Set(V.Screen.Form1!dtpEDate.Value)
+'Get the Previous year starting date range
+F.Intrinsic.String.Right(V.Local.dSDate,4,V.Local.sPYear)
+F.Intrinsic.Math.Sub(V.Local.sPYear,1,V.Local.sPYear)
+F.Intrinsic.Date.Month(V.Local.dSDate,V.Local.iRet(0))
+F.Intrinsic.Date.Day(V.Local.dSDate,V.Local.iRet(1))
+F.Intrinsic.Date.DateSerial(V.Local.sPYear,V.Local.iRet(0),V.Local.iRet(1),V.Local.dPYear)
+
+'Get the Previous year ending date range
+F.Intrinsic.String.Right(V.Local.dEDate,4,V.Local.sPYear)
+F.Intrinsic.Math.Sub(V.Local.sPYear,1,V.Local.sPYear)
+F.Intrinsic.Date.Month(V.Local.dEDate,V.Local.iRet(0))
+F.Intrinsic.Date.Day(V.Local.dEDate,V.Local.iRet(1))
+F.Intrinsic.Date.DateSerial(V.Local.sPYear,V.Local.iRet(0),V.Local.iRet(1),V.Local.dCYear)
+
+
+'Set Case Parameters based on screen selections
+F.Intrinsic.String.Concat(V.Screen.Form1!chkAllPL.Value,V.Screen.Form1!chkAllCust.Value,V.Local.sParam)
+
+F.Intrinsic.Control.SelectCase(V.Local.sParam)
+	'Flexgrid PL and Flexgrid Customers
+	F.Intrinsic.Control.Case("00")
+		'Product Line Flexgrid and UDT
+		V.Local.iRow.Set(V.Screen.Form1!gsfgPL.Rows)
+		F.Intrinsic.Math.Sub(V.Local.iRow,2,V.Local.iRow)
+		'Move contents of the Flexgrid to the UDT
+		gui.Form1.gsfgPL.ExportToUDT(v.uGlobal.uProdLine,"0*!*1","sSPL*!*sEPL",1,v.Local.iRow,False)
+		'Customer Flexgrid and UDT
+		V.Local.iRow2.Set(V.Screen.Form1!gsfgCust.Rows)
+		F.Intrinsic.Math.Sub(V.Local.iRow2,2,V.Local.iRow2)
+		'Move Contents of the Flexgrid to the UDT
+		Gui.Form1.gsfgCust.ExportToUDT(v.uGlobal.uCustomer,"0*!*1","sSCust*!*sECust",1,v.Local.iRow2,False)
+
+		F.Intrinsic.Control.If(V.uGlobal.uCustomer.UBound,!=,-1,"OR",V.uGlobal.uProdLine.UBound,!=,-1)
+		'Loop through the product line udt
+			F.Intrinsic.Control.For(V.Local.iCount,0,V.uGlobal.uProdLine.UBound,1)
+			'Loop through the Customer udt
+				F.Intrinsic.Control.For(V.Local.iCount2,0,V.uGlobal.uCustomer.UBound,1)
+					V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Lines where Date_Order between")
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Product_Line between '",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim,"' and",V.Local.sSql)
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,"' and Customer between '",V.uGlobal.uCustomer(v.Local.iCount2)!sSCust.Trim,"' and ",V.Local.sSql)
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uCustomer(v.Local.iCount2)!sECust.Trim,"'",V.Local.sSql)
+					F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+					F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+						F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.conx!rst.Close
+					V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Hist_Line where Date_Order between")
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Product_Line between '",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim,"' and",V.Local.sSql)
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,"' and Customer between '",V.uGlobal.uCustomer(v.Local.iCount2)!sSCust.Trim,"' and ",V.Local.sSql)
+					F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uCustomer(v.Local.iCount2)!sECust.Trim,"'",V.Local.sSql)
+					F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+					F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+						F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.conx!rst.Close
+				F.Intrinsic.Control.Next(V.Local.iCount2)
+				'Save the PL's to variable
+				F.Intrinsic.Control.If(V.Local.iCount,=,0)
+						F.Intrinsic.String.Concat(V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim," - ",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,V.Local.sPL)
+				F.Intrinsic.Control.Else
+						F.Intrinsic.String.Concat(V.Local.sPL,", ",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim," - ",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,V.Local.sPL)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iCount)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.UI.Msgbox("No selections made!","Error")
+			'Unlock the Screen
+			Gui.Form1.chkAllCust.Enabled(True)
+			Gui.Form1.chkAllPL.Enabled(True)
+			Gui.Form1.cmdAddCust.Enabled(True)
+			Gui.Form1.cmdAddPL.Enabled(True)
+			Gui.Form1.cmdECust.Enabled(True)
+			Gui.Form1.cmdEPL.Enabled(True)
+			Gui.Form1.cmdPrint.Enabled(True)
+			Gui.Form1.cmdSCust.Enabled(True)
+			Gui.Form1.cmdSPL.Enabled(True)
+			Gui.Form1.dtpEDate.Enabled(True)
+			Gui.Form1.dtpSDate.Enabled(True)
+			Gui.Form1.gsfgCust.Enabled(True)
+			Gui.Form1.gsfgPL.Enabled(True)
+			Gui.Form1.txtECust.Enabled(True)
+			Gui.Form1.txtEPL.Enabled(True)
+			Gui.Form1.txtSCust.Enabled(True)
+			Gui.Form1.txtSPL.Enabled(True)
+
+			Gui.Form1.lblGen.Visible(False)
+			Gui.Form1.lblGen.Caption("")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+
+	'Flexgrid PL and All Customers
+	F.Intrinsic.Control.Case("01")
+		V.Local.iRow.Set(V.Screen.Form1!gsfgPL.Rows)
+		F.Intrinsic.Math.Sub(V.Local.iRow,2,V.Local.iRow)
+		'Move contents of the Flexgrid to the UDT
+		gui.Form1.gsfgPL.ExportToUDT(v.uGlobal.uProdLine,"0*!*1","sSPL*!*sEPL",1,v.Local.iRow,False)
+		
+		F.Intrinsic.Control.If(V.uGlobal.uProdLine.UBound,!=,-1)
+			'Loop through the product lines and gather the data from both the Order lines table and the order hist line table.
+			F.Intrinsic.Control.For(V.Local.iCount,0,V.uGlobal.uProdLine.UBound,1)
+				'Get Order Lines Table data
+				V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, ( Extension - (Cost *Qty_Ordered)) as Cost from v_Order_Lines where Date_Order between")
+				F.Intrinsic.String.concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Product_Line between '",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim,"' and",V.Local.sSql)
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,"'",V.Local.sSql)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+				F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rst.Close
+				'Get Order Hist Lines table data
+				V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Hist_Line where Date_Order between")
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Product_Line between '",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim,"' and",V.Local.sSql)
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim,"'",V.Local.sSql)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+				F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rst.Close
+				'Save the PL's to variable
+				F.Intrinsic.Control.If(V.Local.iCount,=,0)
+						F.Intrinsic.String.Concat(V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim," - ",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,V.Local.sPL)
+				F.Intrinsic.Control.Else
+						F.Intrinsic.String.Concat(V.Local.sPL,", ",V.uGlobal.uProdLine(v.Local.iCount)!sSPL.Trim," - ",V.uGlobal.uProdLine(v.Local.iCount)!sEPL.Trim,V.Local.sPL)
+				F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Control.Next(V.Local.iCount)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.UI.Msgbox("Please select Product Lines!","Error")
+			'Unlock the Screen
+			Gui.Form1.chkAllCust.Enabled(True)
+			Gui.Form1.chkAllPL.Enabled(True)
+			Gui.Form1.cmdAddCust.Enabled(True)
+			Gui.Form1.cmdAddPL.Enabled(True)
+			Gui.Form1.cmdECust.Enabled(True)
+			Gui.Form1.cmdEPL.Enabled(True)
+			Gui.Form1.cmdPrint.Enabled(True)
+			Gui.Form1.cmdSCust.Enabled(True)
+			Gui.Form1.cmdSPL.Enabled(True)
+			Gui.Form1.dtpEDate.Enabled(True)
+			Gui.Form1.dtpSDate.Enabled(True)
+			Gui.Form1.gsfgCust.Enabled(True)
+			Gui.Form1.gsfgPL.Enabled(True)
+			Gui.Form1.txtECust.Enabled(True)
+			Gui.Form1.txtEPL.Enabled(True)
+			Gui.Form1.txtSCust.Enabled(True)
+			Gui.Form1.txtSPL.Enabled(True)
+
+			Gui.Form1.lblGen.Visible(False)
+			Gui.Form1.lblGen.Caption("")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+
+	'All PL and Flexgrid Customers
+	F.Intrinsic.Control.Case("10")
+		V.Local.iRow.Set(V.Screen.Form1!gsfgCust.Rows)
+		F.Intrinsic.Math.Sub(V.Local.iRow,2,V.Local.iRow)
+		'Move Contents of the flexgrid to the UDT
+		Gui.Form1.gsfgCust.ExportToUDT(v.uGlobal.uCustomer,"0*!*1","sSCust*!*sECust",1,v.Local.iRow,False)
+		
+		F.Intrinsic.Control.If(V.uGlobal.uCustomer.UBound,!=,-1)
+			'Loop through the customers and gather the data from both the Order Lines table and the Order Hist Line Table
+			F.Intrinsic.Control.For(V.Local.iCount,0,V.uGlobal.uCustomer.UBound,1)
+				V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Lines where Date_Order between")
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Customer between '",V.uGlobal.uCustomer(v.Local.iCount)!sSCust.Trim,"' and",V.Local.sSql)
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uCustomer(v.Local.iCount)!sECust.Trim,"'",V.Local.sSql)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+				F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rst.Close
+				V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Hist_Line where Date_Order between")
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"' and Customer between '",V.uGlobal.uCustomer(v.Local.iCount)!sSCust.Trim,"' and",V.Local.sSql)
+				F.Intrinsic.String.Concat(V.Local.sSql,"'",V.uGlobal.uCustomer(v.Local.iCount)!sECust.Trim,"'",V.Local.sSql)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+				F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,!=,True)
+					F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rst.Close
+			F.Intrinsic.Control.Next(V.Local.iCount)
+			'All PL Go here
+			V.Local.sPL.Set("ALL")
+		F.Intrinsic.Control.Else
+			F.Intrinsic.UI.Msgbox("Please select Customers!","Error")
+			'Unlock the Screen
+			Gui.Form1.chkAllCust.Enabled(True)
+			Gui.Form1.chkAllPL.Enabled(True)
+			Gui.Form1.cmdAddCust.Enabled(True)
+			Gui.Form1.cmdAddPL.Enabled(True)
+			Gui.Form1.cmdECust.Enabled(True)
+			Gui.Form1.cmdEPL.Enabled(True)
+			Gui.Form1.cmdPrint.Enabled(True)
+			Gui.Form1.cmdSCust.Enabled(True)
+			Gui.Form1.cmdSPL.Enabled(True)
+			Gui.Form1.dtpEDate.Enabled(True)
+			Gui.Form1.dtpSDate.Enabled(True)
+			Gui.Form1.gsfgCust.Enabled(True)
+			Gui.Form1.gsfgPL.Enabled(True)
+			Gui.Form1.txtECust.Enabled(True)
+			Gui.Form1.txtEPL.Enabled(True)
+			Gui.Form1.txtSCust.Enabled(True)
+			Gui.Form1.txtSPL.Enabled(True)
+
+			Gui.Form1.lblGen.Visible(False)
+			Gui.Form1.lblGen.Caption("")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+
+
+	'All PL and All Customers
+	F.Intrinsic.Control.Case("11")
+		'Get files from order lines table and save to the udt
+		V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, ( Extension - (Cost *Qty_Ordered)) as Cost from v_Order_Lines where Date_Order between ")
+		F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"'",V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Close
+		'Get files from order hist line and save to the udt
+		V.Local.sSql.Set("Select Customer, Qty_Ordered, Part, Description, Product_Line, Extension, Date_Order, (Extension - (Cost * Qty_Ordered)) as Cost from v_Order_Hist_Line where Date_Order Between ")
+		F.Intrinsic.String.Concat(V.Local.sSql,"'",V.Local.dPYear.PervasiveDate,"' and '",V.Local.dEDate.PervasiveDate,"'",V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,False)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rst","v.uGlobal.uReport",True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.Close
+		'All PL Go here
+		V.Local.sPL.Set("ALL")
+
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.UI.Msgbox("No selections made!","Error")
+			'Unlock the Screen
+			Gui.Form1.chkAllCust.Enabled(True)
+			Gui.Form1.chkAllPL.Enabled(True)
+			Gui.Form1.cmdAddCust.Enabled(True)
+			Gui.Form1.cmdAddPL.Enabled(True)
+			Gui.Form1.cmdECust.Enabled(True)
+			Gui.Form1.cmdEPL.Enabled(True)
+			Gui.Form1.cmdPrint.Enabled(True)
+			Gui.Form1.cmdSCust.Enabled(True)
+			Gui.Form1.cmdSPL.Enabled(True)
+			Gui.Form1.dtpEDate.Enabled(True)
+			Gui.Form1.dtpSDate.Enabled(True)
+			Gui.Form1.gsfgCust.Enabled(True)
+			Gui.Form1.gsfgPL.Enabled(True)
+			Gui.Form1.txtECust.Enabled(True)
+			Gui.Form1.txtEPL.Enabled(True)
+			Gui.Form1.txtSCust.Enabled(True)
+			Gui.Form1.txtSPL.Enabled(True)
+
+			Gui.Form1.lblGen.Visible(False)
+			Gui.Form1.lblGen.Caption("")
+		F.Intrinsic.Control.ExitSub
+	
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uReport!iBIRunID,V.Global.iBIRunID)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uReport!sSDate,V.Local.dSDate)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uReport!sEDate,V.Local.dEDate)
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uReport!sPLSelected,V.Local.sPL)
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!iBIRunID,"iBIRunID")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sEDate,"EDate")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sSDate,"SDate")
+F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sPLSelected,"PL_Selected")
+
+F.Intrinsic.Control.If(V.uGlobal.uReport.UBound,!=,-1)
+	V.Local.sSql.Set("Select * From GCG_4718_SIM_SA_Cust")
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",V.Local.sSql)
+	F.Intrinsic.Variable.SaveUDTToRecordSet("conx","rst","v.uGlobal.uReport")
+	F.ODBC.conx!rst.Close
+	F.Intrinsic.Control.CallSub(Callbi)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("No records to print!","Error")
+	'Unlock the Screen
+	Gui.Form1.chkAllCust.Enabled(True)
+	Gui.Form1.chkAllPL.Enabled(True)
+	Gui.Form1.cmdAddCust.Enabled(True)
+	Gui.Form1.cmdAddPL.Enabled(True)
+	Gui.Form1.cmdECust.Enabled(True)
+	Gui.Form1.cmdEPL.Enabled(True)
+	Gui.Form1.cmdPrint.Enabled(True)
+	Gui.Form1.cmdSCust.Enabled(True)
+	Gui.Form1.cmdSPL.Enabled(True)
+	Gui.Form1.dtpEDate.Enabled(True)
+	Gui.Form1.dtpSDate.Enabled(True)
+	Gui.Form1.gsfgCust.Enabled(True)
+	Gui.Form1.gsfgPL.Enabled(True)
+	Gui.Form1.txtECust.Enabled(True)
+	Gui.Form1.txtEPL.Enabled(True)
+	Gui.Form1.txtSCust.Enabled(True)
+	Gui.Form1.txtSPL.Enabled(True)
+
+	Gui.Form1.lblGen.Visible(False)
+	Gui.Form1.lblGen.Caption("")
+
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!iBIRunID,"")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sEDate,"")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sSDate,"")
+	F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uReport!sPLSelected,"")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+program.sub.cmddelete_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iRow.Declare(Long)
+V.Local.iCounter.Declare(Long)
+V.Local.sRet.Declare(String)
+
+V.Local.iRow.Set(V.Screen.Form1!gsfgPL.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRow,1,V.Local.iRow)
+
+F.Intrinsic.Control.For(V.Local.iCounter,1,V.Local.iRow,1)
+	Gui.Form1.gsfgPL.ReadRow(V.Local.iCounter,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet(2),=,1)
+		Gui.Form1.gsfgPL.DeleteRow(v.Local.iCounter)
+		F.Intrinsic.Math.Sub(V.Local.iCounter,1,V.Local.iCounter)
+'		Gui.Form1.gsfgPL.DeleteRow(v.Local.iCounter)
+		F.Intrinsic.Math.Sub(V.Local.iRow,1,V.Local.iRow)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+V.Local.iRow.Set(V.Screen.Form1!gsfgCust.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRow,1,V.Local.iRow)
+V.Local.iCounter.Set(0)
+F.Intrinsic.Control.For(V.Local.iCounter,1,V.Local.iRow,1)
+	Gui.Form1.gsfgCust.ReadRow(V.Local.iCounter,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet(2),=,1)
+		Gui.Form1.gsfgCust.DeleteRow(v.Local.iCounter)
+		F.Intrinsic.Math.Sub(V.Local.iCounter,1,V.Local.iCounter)
+'		Gui.Form1.gsfgCust.DeleteRow(v.Local.iCounter)
+		F.Intrinsic.Math.Sub(V.Local.iRow,1,V.Local.iRow)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddelete_click.end
+
+Program.Sub.CallBI.Start
+
+
+
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sVal.Declare(String)
+
+F.Global.BI.StopLogging(V.Global.iBILogID)
+V.Local.sParam.Set("BIRUNID")
+V.Local.sVal.Set(V.Global.iBIRunID)
+'Print the Report
+F.Global.BI.RunReportPreProcessor(V.Global.iBIRunID,V.Global.iBILogID,V.Local.sParam,V.Local.sVal,"",-1,True,"",-1,"",-1,"","",V.Global.iBIRunID)
+F.Intrinsic.Control.End
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4718_SIM_SA_Report_Cust.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+
+
+Program.Sub.CallBI.End
+
+program.sub.gsfgpl_commandclick.start
+
+V.Local.iRow.Declare(Long)
+
+V.Local.iRow.Set(V.Screen.Form1!gsfgPL.Row)
+Gui.Form1.gsfgPL.DeleteRow(v.Local.iRow)
+
+program.sub.gsfgpl_commandclick.end
+
+program.sub.gsfgcust_commandclick.start
+
+V.Local.iRow.Declare(Long)
+
+V.Local.iRow.Set(V.Screen.Form1!gsfgCust.Row)
+Gui.Form1.gsfgCust.DeleteRow(v.Local.iRow)
+
+program.sub.gsfgcust_commandclick.end
+
+
